@@ -1,5 +1,6 @@
 package com.arosyadi.promah.fragment;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -10,6 +11,7 @@ import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.viewpager.widget.ViewPager;
 
+import com.arosyadi.promah.CreateActivity;
 import com.arosyadi.promah.R;
 import com.arosyadi.promah.utils.TabPager;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
@@ -33,6 +35,15 @@ public class MainFragment extends Fragment implements TabLayout.OnTabSelectedLis
         tabLayout = view.findViewById(R.id.tab_layout);
         viewPager = view.findViewById(R.id.view_pager);
         fab = view.findViewById(R.id.fab);
+
+        setupTab();
+        fab.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getContext(), CreateActivity.class);
+                startActivity(intent);
+            }
+        });
 
         return view;
     }
