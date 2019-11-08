@@ -26,4 +26,10 @@
     <string name="res_end_date">Tanggal berakhir</string>
     <string name="tv_date_end">tanggal berakhir</string>
     <string name="rs_pku">RS PKU Muhammadiyah</string>
+    <string name="label_scheduled">Scheduled</string>
+    <string name="label_ongoing">On Going</string>
+    <string name="label_completed">Completed</string>
+    <string name="icon_date">icon date</string>
+    <string name="icon_location">icon location</string>
+    <string name="icon_description">icon description</string>
 </resources>
