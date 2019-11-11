@@ -32,4 +32,13 @@
     <string name="icon_date">icon date</string>
     <string name="icon_location">icon location</string>
     <string name="icon_description">icon description</string>
+    
+    <string-array name="unit">
+        <item>Keuangan</item>
+        <item>HR</item>
+        <item>IT</item>
+        <item>Humas</item>
+        <item>Bangsal</item>
+        <item>Lab</item>
+    </string-array>
 </resources>
