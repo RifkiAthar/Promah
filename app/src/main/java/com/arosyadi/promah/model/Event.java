@@ -3,7 +3,7 @@ package com.arosyadi.promah.model;
 import android.os.Parcel;
 import android.os.Parcelable;
 
-public class Event implements Parcelable {
+public class Event{
     private String unit;
     private String name;
     private String eventName;
@@ -11,26 +11,19 @@ public class Event implements Parcelable {
     private String dateEnd;
     private String eventLocation;
 
-    protected Event(Parcel in) {
-        unit = in.readString();
-        name = in.readString();
-        eventName = in.readString();
-        dateStart = in.readString();
-        dateEnd = in.readString();
-        eventLocation = in.readString();
+    public Event(String unit, String name, String eventName, String dateStart, String dateEnd, String eventLocation) {
+        this.unit = unit;
+        this.name = name;
+        this.eventName = eventName;
+        this.dateStart = dateStart;
+        this.dateEnd = dateEnd;
+        this.eventLocation = eventLocation;
     }
 
-    public static final Creator<Event> CREATOR = new Creator<Event>() {
-        @Override
-        public Event createFromParcel(Parcel in) {
-            return new Event(in);
-        }
+    public Event(){}
 
-        @Override
-        public Event[] newArray(int size) {
-            return new Event[size];
-        }
-    };
+
+
 
     public String getUnit() {
         return unit;
@@ -80,18 +73,5 @@ public class Event implements Parcelable {
         this.eventLocation = eventLocation;
     }
 
-    @Override
-    public int describeContents() {
-        return 0;
-    }
 
-    @Override
-    public void writeToParcel(Parcel parcel, int i) {
-        parcel.writeString(unit);
-        parcel.writeString(name);
-        parcel.writeString(eventName);
-        parcel.writeString(dateStart);
-        parcel.writeString(dateEnd);
-        parcel.writeString(eventLocation);
-    }
 }
