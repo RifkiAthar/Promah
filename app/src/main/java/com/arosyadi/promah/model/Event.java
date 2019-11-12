@@ -6,18 +6,48 @@ import android.os.Parcelable;
 public class Event{
     private String unit;
     private String name;
-    private String eventName;
     private String dateStart;
     private String dateEnd;
+    private String monthStart;
+    private String monthEnd;
+    private String eventName;
     private String eventLocation;
+    private String eventSpeaker;
 
-    public Event(String unit, String name, String eventName, String dateStart, String dateEnd, String eventLocation) {
+    public Event(String unit, String name, String dateStart, String dateEnd, String monthStart, String monthEnd, String eventName, String eventLocation, String eventSpeaker) {
         this.unit = unit;
         this.name = name;
-        this.eventName = eventName;
         this.dateStart = dateStart;
         this.dateEnd = dateEnd;
+        this.monthStart = monthStart;
+        this.monthEnd = monthEnd;
+        this.eventName = eventName;
         this.eventLocation = eventLocation;
+        this.eventSpeaker = eventSpeaker;
+    }
+
+    public String getEventSpeaker() {
+        return eventSpeaker;
+    }
+
+    public void setEventSpeaker(String eventSpeaker) {
+        this.eventSpeaker = eventSpeaker;
+    }
+
+    public String getMonthStart() {
+        return monthStart;
+    }
+
+    public void setMonthStart(String monthStart) {
+        this.monthStart = monthStart;
+    }
+
+    public String getMonthEnd() {
+        return monthEnd;
+    }
+
+    public void setMonthEnd(String monthEnd) {
+        this.monthEnd = monthEnd;
     }
 
     public Event(){}
