@@ -1,3 +1,44 @@
 <resources>
     <string name="app_name">MedicaleUser</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
+    <string name="title_activity_login">Sign in</string>
+    <string name="prompt_email">Email</string>
+    <string name="prompt_password">Password</string>
+    <string name="action_sign_in">Sign in or register</string>
+    <string name="action_sign_in_short">Sign in</string>
+    <string name="welcome">"Welcome !"</string>
+    <string name="invalid_username">Not a valid username</string>
+    <string name="invalid_password">Password must be >5 characters</string>
+    <string name="login_failed">"Login failed"</string>
+    <string name="title_add">tambah</string>
+    <string name="ongoing">Ongoing</string>
+    <string name="ended">Berakhir</string>
+    <string name="res_unit">UNIT:</string>
+    <string name="res_name">NAMA:</string>
+    <string name="res_date">Tanggal Pelatihan:</string>
+    <string name="res_dash">-</string>
+    <string name="res_date_end">Pelatihan Berakhir Sejak:</string>
+    <string name="res_date_start">Tanggal mulai:</string>
+    <string name="res_dot">...</string>
+    <string name="tv_date_start">tanggal mulai</string>
+    <string name="res_end_date">Tanggal berakhir</string>
+    <string name="tv_date_end">tanggal berakhir</string>
+    <string name="rs_pku">RS PKU Muhammadiyah</string>
+    <string name="label_scheduled">Scheduled</string>
+    <string name="label_ongoing">On Going</string>
+    <string name="label_completed">Completed</string>
+    <string name="icon_date">icon date</string>
+    <string name="icon_location">icon location</string>
+    <string name="icon_description">icon description</string>
+
+    <string-array name="unit">
+        <item>Keuangan</item>
+        <item>HR</item>
+        <item>IT</item>
+        <item>Humas</item>
+        <item>Bangsal</item>
+        <item>Lab</item>
+    </string-array>
 </resources>

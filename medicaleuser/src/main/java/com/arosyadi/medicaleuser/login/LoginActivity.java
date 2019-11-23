@@ -1,4 +1,4 @@
-package com.arosyadi.promah.login;
+package com.arosyadi.medicaleuser.login;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -14,8 +14,9 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.arosyadi.promah.MainActivity;
-import com.arosyadi.promah.R;
+import com.arosyadi.medicaleuser.MainActivity;
+import com.arosyadi.medicaleuser.R;
+import com.arosyadi.medicaleuser.SplashActivity;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;

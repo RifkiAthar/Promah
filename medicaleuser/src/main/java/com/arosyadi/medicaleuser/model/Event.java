@@ -1,28 +1,24 @@
-package com.arosyadi.promah.model;
-
-
-import java.time.Month;
-import java.util.Date;
-import java.util.HashMap;
-import java.util.Map;
+package com.arosyadi.medicaleuser.model;
 
 public class Event{
-    private String id;
     private String unit;
     private String name;
     private String dateStart;
     private String dateEnd;
+    private String monthStart;
+    private String monthEnd;
     private String eventName;
     private String eventLocation;
     private String eventSpeaker;
     private String eventDesc;
 
-    public Event(String id, String unit, String name, String dateStart, String dateEnd, String eventName, String eventLocation, String eventSpeaker, String eventDesc) {
-        this.id = id;
+    public Event(String unit, String name, String dateStart, String dateEnd, String monthStart, String monthEnd, String eventName, String eventLocation, String eventSpeaker, String eventDesc) {
         this.unit = unit;
         this.name = name;
         this.dateStart = dateStart;
         this.dateEnd = dateEnd;
+        this.monthStart = monthStart;
+        this.monthEnd = monthEnd;
         this.eventName = eventName;
         this.eventLocation = eventLocation;
         this.eventSpeaker = eventSpeaker;
@@ -31,20 +27,28 @@ public class Event{
 
     public Event(){}
 
-    public String getId() {
-        return id;
-    }
-
-    public void setId(String id) {
-        this.id = id;
-    }
-
     public String getEventSpeaker() {
         return eventSpeaker;
     }
 
     public void setEventSpeaker(String eventSpeaker) {
         this.eventSpeaker = eventSpeaker;
+    }
+
+    public String getMonthStart() {
+        return monthStart;
+    }
+
+    public void setMonthStart(String monthStart) {
+        this.monthStart = monthStart;
+    }
+
+    public String getMonthEnd() {
+        return monthEnd;
+    }
+
+    public void setMonthEnd(String monthEnd) {
+        this.monthEnd = monthEnd;
     }
 
     public String getEventDesc() {
@@ -101,21 +105,6 @@ public class Event{
 
     public void setEventLocation(String eventLocation) {
         this.eventLocation = eventLocation;
-    }
-
-    public Map<String, Object> toMap(){
-        HashMap<String, Object> results = new HashMap<>();
-
-        results.put("unit", this.unit);
-        results.put("name", this.unit);
-        results.put("dateStart", this.unit);
-        results.put("dateEnd", this.unit);
-        results.put("eventName", this.unit);
-        results.put("eventLocation", this.unit);
-        results.put("eventSpeaker", this.unit);
-        results.put("eventDesc", this.unit);
-
-        return results;
     }
 
 

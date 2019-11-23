@@ -32,7 +32,11 @@
     <string name="icon_date">icon date</string>
     <string name="icon_location">icon location</string>
     <string name="icon_description">icon description</string>
-    
+    <string name="res_event_name">NAMA PELATIHAN</string>
+    <string name="res_event_desc">Deskripsi Pelatihan</string>
+    <string name="res_event_location">Lokasi Pelatihan</string>
+    <string name="res_event_speaker">Pembicara</string>
+
     <string-array name="unit">
         <item>Keuangan</item>
         <item>HR</item>

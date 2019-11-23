@@ -1,4 +1,4 @@
-package com.arosyadi.promah.login;
+package com.arosyadi.medicaleuser.login;
 
 public class UserModel {
     public String username, email;
