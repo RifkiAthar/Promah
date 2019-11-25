@@ -1,7 +1,6 @@
-package com.arosyadi.promah.adapter;
+package com.arosyadi.medicaleuser.adapter;
 
 import android.content.Context;
-import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -11,9 +10,8 @@ import androidx.annotation.NonNull;
 import androidx.cardview.widget.CardView;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.arosyadi.promah.CreateActivity;
-import com.arosyadi.promah.R;
-import com.arosyadi.promah.model.Event;
+import com.arosyadi.medicaleuser.R;
+import com.arosyadi.medicaleuser.model.Event;
 import com.google.firebase.firestore.FirebaseFirestore;
 
 import java.text.ParseException;
@@ -79,10 +77,10 @@ public class ScheduledAdapter extends RecyclerView.Adapter<ScheduledAdapter.Sche
 
         void onBind(final Event item){
 
-            String dateStart = item.getDateStart();
-            SimpleDateFormat dateStartFormat = new SimpleDateFormat("dd MMM yyyy", Locale.getDefault());
+            String datestart = item.getDateStart();
+            SimpleDateFormat dateStartFormat = new SimpleDateFormat("yyyy-MM-dd", Locale.getDefault());
             try {
-                Date date = dateStartFormat.parse(dateStart);
+                Date date = dateStartFormat.parse(datestart);
                 SimpleDateFormat dateUpdate =new SimpleDateFormat("dd");
                 String NewRelease = dateUpdate.format(date);
                 startDate.setText(NewRelease);
@@ -90,19 +88,19 @@ public class ScheduledAdapter extends RecyclerView.Adapter<ScheduledAdapter.Sche
                 e.printStackTrace();
             }
 
-            String dateEnd = item.getDateEnd();
-            SimpleDateFormat dateEndFormat = new SimpleDateFormat("dd MMM yyyyy", Locale.getDefault());
+            String dateEnd = item.getDateStart();
+            SimpleDateFormat dateEndFormat = new SimpleDateFormat("yyyy-MM-dd", Locale.getDefault());
             try {
                 Date date = dateEndFormat.parse(dateEnd);
                 SimpleDateFormat dateUpdate =new SimpleDateFormat("dd");
-                String NewEnd = dateUpdate.format(date);
-                endDate.setText(NewEnd);
+                String NewRelease = dateUpdate.format(date);
+                endDate.setText(NewRelease);
             } catch (ParseException e) {
                 e.printStackTrace();
             }
 
             String monthstart = item.getDateStart();
-            SimpleDateFormat monthStartFormat = new SimpleDateFormat("dd MMM yyyyy", Locale.getDefault());
+            SimpleDateFormat monthStartFormat = new SimpleDateFormat("yyyy-MM-dd", Locale.getDefault());
             try {
                 Date date = monthStartFormat.parse(monthstart);
                 SimpleDateFormat dateUpdate =new SimpleDateFormat("MMM");
@@ -113,7 +111,7 @@ public class ScheduledAdapter extends RecyclerView.Adapter<ScheduledAdapter.Sche
             }
 
             String monthEnd = item.getDateStart();
-            SimpleDateFormat monthEndFormat = new SimpleDateFormat("dd MMM yyyyy", Locale.getDefault());
+            SimpleDateFormat monthEndFormat = new SimpleDateFormat("yyyy-MM-dd", Locale.getDefault());
             try {
                 Date date = monthEndFormat.parse(monthEnd);
                 SimpleDateFormat dateUpdate =new SimpleDateFormat("MMM");
@@ -126,27 +124,9 @@ public class ScheduledAdapter extends RecyclerView.Adapter<ScheduledAdapter.Sche
             eventName.setText(item.getEventName());
             eventLoc.setText(item.getEventLoc());
             eventSpeaker.setText(item.getEventSpeaker());
-            cardView.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    update(item);
-                }
-            });
+
         }
 
-        private void update(Event event) {
-            Intent intent = new Intent(context, CreateActivity.class);
-            intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-            intent.putExtra("UpdateEventId", event.getId());
-            intent.putExtra("updateStartDate", event.getDateStart());
-            intent.putExtra("updateEndDate", event.getDateEnd());
-            intent.putExtra("updateEventName", event.getEventName());
-            intent.putExtra("updateEventLoc", event.getEventLoc());
-            intent.putExtra("UpdateEventSpeaker", event.getEventSpeaker());
-            intent.putExtra("updateEventDesc", event.getEventDesc());
-            intent.putExtra("updateUnit", event.getUnit());
-            intent.putExtra("updateUserName", event.getName());
-            context.startActivity(intent);
-        }
+
     }
 }

@@ -1,8 +1,6 @@
 package com.arosyadi.promah.model;
 
 
-import java.time.Month;
-import java.util.Date;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -13,7 +11,7 @@ public class Event{
     private String dateStart;
     private String dateEnd;
     private String eventName;
-    private String eventLocation;
+    private String eventLoc;
     private String eventSpeaker;
     private String eventDesc;
 
@@ -24,7 +22,18 @@ public class Event{
         this.dateStart = dateStart;
         this.dateEnd = dateEnd;
         this.eventName = eventName;
-        this.eventLocation = eventLocation;
+        this.eventLoc = eventLocation;
+        this.eventSpeaker = eventSpeaker;
+        this.eventDesc = eventDesc;
+    }
+
+    public Event(String unit, String name, String dateStart, String dateEnd, String eventName, String eventLocation, String eventSpeaker, String eventDesc) {
+        this.unit = unit;
+        this.name = name;
+        this.dateStart = dateStart;
+        this.dateEnd = dateEnd;
+        this.eventName = eventName;
+        this.eventLoc = eventLocation;
         this.eventSpeaker = eventSpeaker;
         this.eventDesc = eventDesc;
     }
@@ -95,12 +104,12 @@ public class Event{
         this.dateEnd = dateEnd;
     }
 
-    public String getEventLocation() {
-        return eventLocation;
+    public String getEventLoc() {
+        return eventLoc;
     }
 
-    public void setEventLocation(String eventLocation) {
-        this.eventLocation = eventLocation;
+    public void setEventLoc(String eventLoc) {
+        this.eventLoc = eventLoc;
     }
 
     public Map<String, Object> toMap(){
@@ -111,7 +120,7 @@ public class Event{
         results.put("dateStart", this.unit);
         results.put("dateEnd", this.unit);
         results.put("eventName", this.unit);
-        results.put("eventLocation", this.unit);
+        results.put("eventLoc", this.unit);
         results.put("eventSpeaker", this.unit);
         results.put("eventDesc", this.unit);
 

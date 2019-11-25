@@ -1,6 +1,7 @@
 package com.arosyadi.medicaleuser.model;
 
 public class Event{
+    private String id;
     private String unit;
     private String name;
     private String dateStart;
@@ -8,11 +9,12 @@ public class Event{
     private String monthStart;
     private String monthEnd;
     private String eventName;
-    private String eventLocation;
+    private String eventLoc;
     private String eventSpeaker;
     private String eventDesc;
 
-    public Event(String unit, String name, String dateStart, String dateEnd, String monthStart, String monthEnd, String eventName, String eventLocation, String eventSpeaker, String eventDesc) {
+    public Event(String id, String unit, String name, String dateStart, String dateEnd, String monthStart, String monthEnd, String eventName, String eventLocation, String eventSpeaker, String eventDesc) {
+        this.id = id;
         this.unit = unit;
         this.name = name;
         this.dateStart = dateStart;
@@ -20,12 +22,20 @@ public class Event{
         this.monthStart = monthStart;
         this.monthEnd = monthEnd;
         this.eventName = eventName;
-        this.eventLocation = eventLocation;
+        this.eventLoc = eventLocation;
         this.eventSpeaker = eventSpeaker;
         this.eventDesc = eventDesc;
     }
 
     public Event(){}
+
+    public String getId() {
+        return id;
+    }
+
+    public void setId(String id) {
+        this.id = id;
+    }
 
     public String getEventSpeaker() {
         return eventSpeaker;
@@ -99,12 +109,12 @@ public class Event{
         this.dateEnd = dateEnd;
     }
 
-    public String getEventLocation() {
-        return eventLocation;
+    public String getEventLoc() {
+        return eventLoc;
     }
 
-    public void setEventLocation(String eventLocation) {
-        this.eventLocation = eventLocation;
+    public void setEventLoc(String eventLoc) {
+        this.eventLoc = eventLoc;
     }
 
 
